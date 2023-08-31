@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANIMES</title>
+    <link href="dist/output.css" rel="stylesheet" />
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body>
+    <audio autoplay="true">
+      <source src="boa.mp3" type="audio/mpeg" />
+      Browsermu tidak mendukung tag audio, upgrade donk!
+    </audio>
+    <header>
+      <nav x-data="{ isOpen: false }" class="bg-white shadow dark:bg-gray-900">
+        <div class="container px-6 py-4 mx-auto">
+          <div class="lg:flex lg:items-center lg:justify-between">
+            <div class="flex items-center justify-between">
+              <a href="#" class="mx-auto">
+                <img class="w-auto h-6 sm:h-7" src="hero.jpg" alt="" />
+              </a>
+
+              <!-- Mobile menu button -->
+              <div class="flex lg:hidden">
+                <button
+                  x-cloak
+                  @click="isOpen = !isOpen"
+                  type="button"
+                  class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                  aria-label="toggle menu"
+                >
+                  <svg
+                    x-show="!isOpen"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 8h16M4 16h16"
+                    />
+                  </svg>
+
+                  <svg
+                    x-show="isOpen"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+            <div
+              x-cloak
+              :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
+              class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0"
+            >
+              <div class="-mx-4 lg:flex lg:items-center">
+                <a
+                  href="#"
+                  class="block mx-4 text-gray-700 capitalize dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+                  >Home</a
+                >
+                <a
+                  href="#"
+                  class="block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+                  >Blog</a
+                >
+                <a
+                  href="#"
+                  class="block mx-4 mt-4 text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+                  >Picture</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="w-full bg-center bg-cover h-[38rem]"
+        style="
+          background-image: url('https://images2.alphacoders.com/743/743487.jpg');
+        "
+      >
+        <div
+          class="flex items-center justify-center w-full h-full bg-gray-900/40"
+        >
+          <div class="text-center">
+            <h1 class="text-3xl font-semibold text-white lg:text-4xl">
+              Quetos <span class="text-blue-400">full</span> Character
+            </h1>
+            <button
+              class="w-full px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+            >
+              Start project
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-10 mx-auto">
+        <div class="lg:-mx-6 lg:flex lg:items-center">
+          <img
+            class="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
+            src="https://i.pinimg.com/originals/01/0f/ca/010fca6d6f1e583e1649c7c081d7d3b9.jpg"
+            alt=""
+          />
+
+          <div class="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
+            <p class="text-5xl font-semibold text-blue-500">“</p>
+
+            <h1
+              class="text-2xl font-semibold text-gray-800 dark:text-white lg:text-3xl lg:w-96"
+            >
+              Saudaraku,
+            </h1>
+
+            <p class="max-w-lg mt-6 text-gray-500 dark:text-gray-400">
+              “ Kopi yang pahit akan terasa nyaman tergantung cara kita
+              menikmatinya, begitu juga dengan hidup ”
+            </p>
+
+            <h3 class="mt-6 text-lg font-medium text-blue-500">
+              Miyamoto musashi
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">legendary samurai</p>
+
+            <div
+              class="flex items-center justify-between mt-12 lg:justify-start"
+            >
+              <button
+                title="left arrow"
+                class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 hover:bg-gray-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <button
+                title="right arrow"
+                class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 lg:mx-6 hover:bg-gray-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-10 mx-auto">
+        <div class="text-center">
+          <h1
+            class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
+          >
+            From the blog character anime
+          </h1>
+
+          <p class="max-w-lg mx-auto mt-4 text-gray-500">
+            Quotes adalah sebuah kutipan dari sebuah teks atau pidato yang biasa
+            kita temui dalam sebuah ilustrasi. Biasanya, sebagai manusia yang
+            menjalani kehidupan, tidak terlepas dari sebuah masalah.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3"
+        >
+          <div>
+            <div class="relative">
+              <img
+                class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                src="https://i.pinimg.com/originals/6e/72/fe/6e72fe877dc2bd89497c0d0a4dc15868.jpg"
+                alt=""
+              />
+
+              <div class="absolute bottom-0 flex p-3 bg-white dark:bg-gray-900">
+                <img
+                  class="object-cover object-center w-10 h-10 rounded-full"
+                  src="https://i.pinimg.com/originals/6e/72/fe/6e72fe877dc2bd89497c0d0a4dc15868.jpg"
+                  alt=""
+                />
+
+                <div class="mx-4">
+                  <h1 class="text-sm text-gray-700 dark:text-gray-200"></h1>
+                  <p class="text-sm text-gray-500 dark:text-gray-400"></p>
+                </div>
+              </div>
+            </div>
+
+            <h1
+              class="mt-6 text-xl font-semibold text-gray-800 dark:text-white"
+            >
+              "Manusia itu lemah mereka hanya memikirkan diri mereka sendiri"
+            </h1>
+
+            <hr class="w-32 my-6 text-blue-500" />
+
+            <p class="text-sm text-gray-500 dark:text-gray-400"></p>
+
+            <a
+              href="#"
+              class="inline-block mt-4 text-blue-500 underline hover:text-blue-400"
+              >Read more</a
+            >
+          </div>
+
+          <div>
+            <div class="relative">
+              <img
+                class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                src="https://i.pinimg.com/originals/a2/95/49/a295494eb762dffa14c6fa73754ee0b9.jpg"
+                alt=""
+              />
+
+              <div class="absolute bottom-0 flex p-3 bg-white dark:bg-gray-900">
+                <img
+                  class="object-cover object-center w-10 h-10 rounded-full"
+                  src="https://i.pinimg.com/originals/a2/95/49/a295494eb762dffa14c6fa73754ee0b9.jpg"
+                  alt=""
+                />
+
+                <div class="mx-4">
+                  <h1 class="text-sm text-gray-700 dark:text-gray-200"></h1>
+                  <p class="text-sm text-gray-500 dark:text-gray-400"></p>
+                </div>
+              </div>
+            </div>
+
+            <h1
+              class="mt-6 text-xl font-semibold text-gray-800 dark:text-white"
+            >
+              "Aku pernah Menceritakan mimpi besarku kepada orang yang berfikir
+              kecil, mereka tertawa dan menganggapku orang gila"
+            </h1>
+
+            <hr class="w-32 my-6 text-blue-500" />
+
+            <p class="text-sm text-gray-500 dark:text-gray-400"></p>
+
+            <a
+              href="#"
+              class="inline-block mt-4 text-blue-500 underline hover:text-blue-400"
+              >Read more</a
+            >
+          </div>
+
+          <div>
+            <div class="relative">
+              <img
+                class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                src="https://i.pinimg.com/originals/87/a1/4a/87a14aecf76fde97b99363e40d704631.jpg"
+                alt=""
+              />
+
+              <div class="absolute bottom-0 flex p-3 bg-white dark:bg-gray-900">
+                <img
+                  class="object-cover object-center w-10 h-10 rounded-full"
+                  src="https://i.pinimg.com/originals/87/a1/4a/87a14aecf76fde97b99363e40d704631.jpg"
+                  alt=""
+                />
+
+                <div class="mx-4">
+                  <h1 class="text-sm text-gray-700 dark:text-gray-200"></h1>
+                  <p class="text-sm text-gray-500 dark:text-gray-400"></p>
+                </div>
+              </div>
+            </div>
+
+            <h1
+              class="mt-6 text-xl font-semibold text-gray-800 dark:text-white"
+            >
+              "Hinaan?? Hah! Memangnya kau siapa sampai aku harus peduli dengan
+              hinaanmu yang tidak berguna itu?!"
+            </h1>
+
+            <hr class="w-32 my-6 text-blue-500" />
+
+            <p class="text-sm text-gray-500 dark:text-gray-400"></p>
+
+            <a
+              href="#"
+              class="inline-block mt-4 text-blue-500 underline hover:text-blue-400"
+              >Read more</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-10 mx-auto">
+        <h1
+          class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
+        ></h1>
+
+        <div
+          class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 lg:grid-cols-2"
+        >
+          <div
+            class="flex items-end overflow-hidden bg-cover rounded-lg h-96"
+            style="
+              background-image: url('https://i.pinimg.com/originals/55/f0/b5/55f0b5325946ca91b6c4ca154b18b877.jpg');
+            "
+          >
+            <div
+              class="w-full px-8 py-4 overflow-hidden rounded-b-lg backdrop-blur-sm bg-white/60 dark:bg-gray-800/60"
+            >
+              <h2
+                class="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white"
+              >
+                "Cinta itu seperti mandi hujan, seneng di awal sakit di akhir"
+              </h2>
+              <p
+                class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400"
+              ></p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-end overflow-hidden bg-cover rounded-lg h-96"
+            style="
+              background-image: url('https://images7.alphacoders.com/714/714052.jpg');
+            "
+          >
+            <div
+              class="w-full px-8 py-4 overflow-hidden rounded-b-lg backdrop-blur-sm bg-white/60 dark:bg-gray-800/60"
+            >
+              <h2
+                class="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white"
+              >
+                "Kamu hanya menganggapku sebagai teman, sedangkan aku sudah
+                terlanjur menaruh perasaan"
+              </h2>
+              <p
+                class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400"
+              ></p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-end overflow-hidden bg-cover rounded-lg h-96"
+            style="
+              background-image: url('https://i.pinimg.com/originals/39/df/1a/39df1a6fc92432c3c1a444c5ab3c1aba.jpg');
+            "
+          >
+            <div
+              class="w-full px-8 py-4 overflow-hidden rounded-b-lg backdrop-blur-sm bg-white/60 dark:bg-gray-800/60"
+            >
+              <h2
+                class="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white"
+              >
+                "kalau tahu sesedih ini, kalau tahu sesepi ini <br />
+                mungkin aku...tidak membutuhkan hati
+              </h2>
+              <p
+                class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400"
+              ></p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-end overflow-hidden bg-cover rounded-lg h-96"
+            style="
+              background-image: url('https://i.pinimg.com/originals/c6/b0/30/c6b030036de12d27c7825c7a66499bb1.jpg');
+            "
+          >
+            <div
+              class="w-full px-8 py-4 overflow-hidden rounded-b-lg backdrop-blur-sm bg-white/60 dark:bg-gray-800/60"
+            >
+              <h2
+                class="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white"
+              >
+                "Aku terlalu percaya kepadanya, hingga kembali untuk kesekian
+                kalinya"
+              </h2>
+              <p
+                class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white dark:bg-gray-900">
+      <div class="h-[32rem] bg-gray-100 dark:bg-gray-800">
+        <div class="container px-6 py-10 mx-auto">
+          <h1
+            class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white"
+          >
+            The eyes tell me everything
+          </h1>
+
+          <div class="flex justify-center mx-auto mt-6">
+            <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+            <span
+              class="inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full"
+            ></span>
+            <span class="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
+          </div>
+
+          <p
+            class="max-w-2xl mx-auto mt-6 text-center text-gray-500 dark:text-gray-300"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+            incidunt ex placeat modi magni quia error alias, adipisci rem
+            similique, at omnis eligendi optio eos harum.
+          </p>
+        </div>
+      </div>
+
+      <div class="container px-6 py-10 mx-auto -mt-72 sm:-mt-80 md:-mt-96">
+        <div
+          class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3"
+        >
+          <div
+            class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700"
+          >
+            <img
+              class="object-cover w-full rounded-xl aspect-square"
+              src="https://i.pinimg.com/originals/ac/ba/13/acba13086ba4942c2774e6635854b2de.jpg"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white"
+            >
+              "Mengapa semua ini terjadi kepadaku saja!"
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300"></p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700"
+          >
+            <img
+              class="object-cover w-full rounded-xl aspect-square"
+              src="https://i.pinimg.com/originals/f3/f8/15/f3f815bec2e9e1fac7767840accbc42f.jpg"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white"
+            >
+              "Aku menyesal meninggalkan dia...kembalilah"
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300"></p>
+          </div>
+
+          <div
+            class="flex flex-col items-center p-4 border sm:p-6 rounded-xl dark:border-gray-700"
+          >
+            <img
+              class="object-cover w-full rounded-xl aspect-square"
+              src="https://i.pinimg.com/originals/a0/7d/f3/a07df366fcb733c86840001e05de5657.jpg"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white"
+            >
+              "Apa yang salah denganku kenapa semua ini terjadi?!"
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
